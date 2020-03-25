@@ -1,0 +1,30 @@
+{{#let (if @linkToComponent @linkToComponent (component "link-to")) as |LinkTo|}}
+  <nav local-class="navigation" ...attributes>
+    <ul role="menu" local-class="main">
+      {{#each this.blog.navigation as |navigation|}}
+        <li local-class="{{if (route-is navigation.route) "active"}}" role="menuitem">
+          {{#if navigation.id}}
+            <LinkTo @route={{navigation.route}} @model={{navigation.id}}>{{navigation.label}}</LinkTo>
+          {{else if navigation.route}}
+            <LinkTo @route={{navigation.route}}>{{navigation.label}}</LinkTo>
+          {{else if navigation.link}}
+            <a href="{{navigation.link}}">{{navigation.label}}</a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+
+    <h3>Tags</h3>
+    <ul local-class="tags">
+      {{#each (sort-by 'posts.length:desc' this.tags) as |tag|}}
+        <li local-class="{{if (route-is navigation.route) "active"}}">
+          {{#if @linkToComponent}}
+            <LinkTo @route="tag" @model={{tag.id}}>{{tag.name}}</LinkTo>
+          {{else}}
+            <LinkTo @route="tag" @model={{tag.id}}>{{tag.name}}</LinkTo>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </nav>
+{{/let}}

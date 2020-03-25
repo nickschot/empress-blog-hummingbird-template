@@ -1,9 +1,12 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
-import layout from '../templates/components/navigation';
 
-export default Component.extend({
-  blog: service(),
-  router: service(),
-  layout
-});
+export default class Navigation extends Component {
+  @service blog;
+  @service router;
+  @service store;
+
+  get tags() {
+    return this.store.peekAll('tag');
+  }
+}

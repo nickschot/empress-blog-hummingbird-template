@@ -1,18 +1,14 @@
-import Component from '@ember/component';
-import { computed } from '@ember/object';
+import Component from '@glimmer/component';
 import { htmlSafe } from '@ember/template';
-import layout from '../templates/components/post-card';
 
-export default Component.extend({
-  layout,
-  tagName: '',
-  computedStyle: computed('post.image', function() {
-    if(!this.post.image) {
-      return;
+export default class PostCard extends Component {
+  get styles() {
+    let styles = '';
+
+    if (this.args.post.image) {
+      styles = `background-image: url(${this.args.post.image})`;
     }
 
-    // Make sure this is in fact safe!! this does not make things safe, it tells
-    // the template that it is safe.
-    return htmlSafe(`background-image: url(${this.post.image})`);
-  })
-});
+    return htmlSafe(styles);
+  }
+}

@@ -1,0 +1,28 @@
+.navigation {
+  padding: 0 1rem;
+
+  & ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.125rem;
+  }
+
+  & a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+
+    &:focus, &:active, &:hover {
+      background: #DDD;
+    }
+
+    &:global(.active) {
+      color: #FFF;
+      background: #e04e39;
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article local-class="post-card" class={{@post_class}} ...attributes>
+  <LinkTo @route="post" @model={{@post.id}} style={{this.styles}}>
+    <div local-class="content">
+      {{#if @post.primaryTag}}
+        <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
+      {{/if}}
+      <h2 local-class="title">{{@post.title}}</h2>
+    </div>
+  </LinkTo>
+</article>

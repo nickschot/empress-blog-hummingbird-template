@@ -1,0 +1,33 @@
+.post-card {
+  & > a {
+    display: flex;
+    align-items: flex-end;
+    min-height: 20rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    text-decoration: none!important;
+
+    background-color: #FFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
+  }
+}
+
+.content {
+
+}
+
+.tag {
+  text-transform: uppercase;
+  color: #FFF;
+  opacity: 0.8;
+}
+
+.title {
+  color: #FFF;
+  margin: 0;
+}

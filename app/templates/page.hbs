@@ -1,10 +1,9 @@
-
-{{#let model as |post|}}
-<article class="post-content {{post_class}} {{unless post.image 'no-image'}}">
+{{#let this.model as |post|}}
+  <article class="post-content {{this.post_class}} {{unless post.image 'no-image'}}">
 
     <div class="post-content-body">
-        {{markdown-to-html post.content tagName=""}}
+      {{markdown-to-html post.content tagName=""}}
     </div>
 
-</article>
+  </article>
 {{/let}}
