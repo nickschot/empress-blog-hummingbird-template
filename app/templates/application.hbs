@@ -1,0 +1,39 @@
+    <header class="site-head">
+        <div class="site-head-container">
+            <nav id="swup" class="site-head-left">
+                <Navigation />
+            </nav>
+            <div class="site-head-center">
+                {{#if @site.logo}}
+                <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                {{else}}
+                <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
+                {{/if}}
+            </div>
+            <div class="site-head-right">
+                <div class="social-links">
+                    {{#if @site.facebook}}
+                    <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    {{/if}}
+                    {{#if @site.twitter}}
+                    <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    {{/if}}
+                    {{#if blog.host}}
+                    <a href={{concat "https://feedly.com/i/subscription/feed/" (encode blog.host) '/rss.xml'}} title="RSS" target="_blank" rel="noopener">RSS</a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="site-main" class="site-main">
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{outlet}}
+
+    </main>
+
+    {{!-- The footer at the very bottom of the screen --}}
+    <footer class="site-foot">
+        &copy; {{date format="YYYY"}} {{#link-to 'index'}}{{blog.title}}{{/link-to}} &mdash; Published with <a href="https://github.com/empress/empress-blog" target="_blank" rel="noopener">empress-blog</a>
+    </footer>
