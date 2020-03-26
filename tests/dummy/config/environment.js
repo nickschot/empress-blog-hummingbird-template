@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
 
     EmberENV: {
       FEATURES: {
@@ -36,6 +36,10 @@ module.exports = function (environment) {
         route: 'page',
         id: 'chris-manson'
       }]
+    },
+
+    fastboot: {
+      hostWhitelist: ['hummingbird.eu.ngrok.io', /^localhost:\d+$/]
     }
   };
 

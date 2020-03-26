@@ -48,14 +48,8 @@
 
     <mmw.Content>
       <main id="site-main" class="site-main">
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{outlet}}
       </main>
-
-      {{!-- The footer at the very bottom of the screen --}}
-      <footer class="site-foot">
-        &copy; {{date format="YYYY"}} <LinkTo @route="index">{{this.blog.title}}</LinkTo> &mdash; Published with <a href="https://github.com/empress/empress-blog" target="_blank" rel="noopener">empress-blog</a>
-      </footer>
     </mmw.Content>
   </MobileMenuWrapper>
 </MobileBarWrapper>
