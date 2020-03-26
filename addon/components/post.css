@@ -21,7 +21,13 @@
   padding: 1rem;
   background: #FFF;
 
+  & > * {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
   & img {
+    margin: 0 auto;
     max-width: 100%;
 
     &[src$="#full"] {
@@ -33,6 +39,7 @@
 
   & p {
     margin-top: 0;
+    overflow-x: unset;
   }
 
   & blockquote {

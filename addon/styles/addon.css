@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
 
@@ -28,12 +28,20 @@ main {
 
   &, & :global(.mobile-menu-wrapper__content) {
     min-height: 100vh;
+
+    & > * {
+      transition: opacity 0.3s;
+    }
   }
 
   & :global(.mobile-menu__tray) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: 768px) {
+      border-right: 1px solid #CCC;
+    }
 
     & footer {
       font-size: 0.8em;
@@ -48,6 +56,14 @@ main {
   & :global(.mobile-menu--transitioning) ~ :global(.mobile-bar)
   {
     transform: translateY(-100%)!important;
+  }
+
+  @media (max-width: 767px) {
+    & :global(.mobile-menu--open) ~ :global(.mobile-menu-wrapper__content) {
+      & > * {
+        opacity: 0.5;
+      }
+    }
   }
 
   & :global(.mobile-menu__mask) {

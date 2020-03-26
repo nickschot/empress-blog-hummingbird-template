@@ -1,8 +1,9 @@
 {{#let (if @linkToComponent @linkToComponent (component "link-to")) as |LinkTo|}}
   <nav local-class="navigation" ...attributes>
+    <h3>Menu</h3>
     <ul role="menu" local-class="main">
       {{#each this.blog.navigation as |navigation|}}
-        <li local-class="{{if (route-is navigation.route) "active"}}" role="menuitem">
+        <li role="menuitem">
           {{#if navigation.id}}
             <LinkTo @route={{navigation.route}} @model={{navigation.id}}>{{navigation.label}}</LinkTo>
           {{else if navigation.route}}
@@ -17,7 +18,7 @@
     <h3>Tags</h3>
     <ul local-class="tags">
       {{#each (sort-by 'posts.length:desc' this.tags) as |tag|}}
-        <li local-class="{{if (route-is navigation.route) "active"}}">
+        <li role="menuitem">
           <LinkTo @route="tag" @model={{tag.id}}>#&nbsp;{{tag.id}}</LinkTo>
         </li>
       {{/each}}

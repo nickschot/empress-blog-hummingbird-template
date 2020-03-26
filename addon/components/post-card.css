@@ -15,7 +15,21 @@
     background-position: center center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 
-    transition: all 0.15s;
+    transition: all 0.3s;
+
+    &:hover, &:focus, &:active {
+      transform: scale(0.95);
+    }
+
+    @media (min-width: 768px) {
+      &:hover, &:focus {
+        transform: scale(1.01);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
   }
 }
 

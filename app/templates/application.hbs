@@ -1,9 +1,10 @@
 <MobileBarWrapper as |mbw|>
   <MobileMenuWrapper
     @openDetectionWidth={{-1}}
-    @embed={{not (media "isMobile")}}
   as |mmw|>
     <mmw.MobileMenu
+      @width={{90}}
+      @maxWidth={{if (media "isMobile") -1 300}}
       @mode={{if (media "isMobile") "ios" "squeeze-reveal"}}
       @maskEnabled={{media "isMobile"}}
       @shadowEnabled={{media "isMobile"}}
