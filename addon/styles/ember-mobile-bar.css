@@ -4,7 +4,7 @@
     position: fixed;
     left: 0;
     touch-action: pan-x;
-    background: #FFF;
+    /*background: #FFF;*/
     color: #333;
 
     &--top {

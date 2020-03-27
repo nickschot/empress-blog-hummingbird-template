@@ -86,8 +86,25 @@
       align-items: center;
       padding: 0.5rem;
 
+      a {
+        height: 32px;
+        line-height: 32px;
+        color: #333;
+        text-decoration: none;
+      }
+
       button {
         border: none;
+      }
+
+      .mobile-bar__title {
+        font-weight: 500;
+
+        transition: visibility 0.3s linear, opacity 0.3s;
+      }
+
+      .fake-toggle {
+        width: 32px;
       }
     }
 
@@ -96,10 +113,11 @@
       font-size: 0.9rem;
       text-transform: uppercase;
     }
-  }
 
-  .mobile-bar--top {
-    border-bottom: 1px solid #CCC;
+    &--top {
+      background: #FFF;
+      border-bottom: 1px solid #CCC;
+    }
   }
 
   .post-content-image .kg-image {
@@ -122,6 +140,34 @@
 
     @media (min-width: 45rem) {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  body.detector-visible {
+    .mobile-bar {
+      &.mobile-bar--top {
+        background: transparent;
+        border-bottom-color: transparent;
+
+        .mobile-bar__title {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  body.detector-hidden {
+    .mobile-bar {
+      &.mobile-bar--top {
+        background: #FFF;
+        border-bottom-color: #CCC;
+
+        .mobile-bar__title {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -2,49 +2,45 @@
   <MobileMenuWrapper
     @openDetectionWidth={{-1}}
   as |mmw|>
-    <mmw.MobileMenu
-      @width={{90}}
-      @maxWidth={{if (media "isMobile") -1 300}}
-      @mode={{if (media "isMobile") "ios" "squeeze-reveal"}}
-      @maskEnabled={{media "isMobile"}}
-      @shadowEnabled={{media "isMobile"}}
-    as |mm|>
-      <Navigation @linkToComponent={{mm.LinkTo}}/>
+    {{#unless (route-is "post")}}
+      <mmw.MobileMenu
+        @width={{90}}
+        @maxWidth={{if (media "isMobile") -1 300}}
+        @mode={{if (media "isMobile") "ios" "squeeze-reveal"}}
+        @maskEnabled={{media "isMobile"}}
+        @shadowEnabled={{media "isMobile"}}
+      as |mm|>
+        <Navigation @linkToComponent={{mm.LinkTo}}/>
 
-      <div class="social-links">
-        {{#if @site.facebook}}
-          <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
-        {{/if}}
-        {{#if @site.twitter}}
-          <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
-        {{/if}}
-        {{#if this.blog.host}}
-          <a href={{concat "https://feedly.com/i/subscription/feed/" (encode this.blog.host) '/rss.xml'}} title="RSS" target="_blank" rel="noopener noreferrer">RSS</a>
-        {{/if}}
-      </div>
+        <div class="social-links">
+          {{#if @site.facebook}}
+            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+          {{/if}}
+          {{#if @site.twitter}}
+            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+          {{/if}}
+          {{#if this.blog.host}}
+            <a href={{concat "https://feedly.com/i/subscription/feed/" (encode this.blog.host) '/rss.xml'}} title="RSS" target="_blank" rel="noopener noreferrer">RSS</a>
+          {{/if}}
+        </div>
 
-      <footer>
-        &copy; {{date format="YYYY"}} {{this.blog.title}}
-        <br>
-        Published with <a href="https://github.com/empress/empress-blog" target="_blank" rel="noopener noreferrer">empress-blog</a>
-      </footer>
-    </mmw.MobileMenu>
+        <footer>
+          &copy; {{date format="YYYY"}} {{this.blog.title}}
+          <br>
+          Published with <a href="https://github.com/empress/empress-blog" target="_blank" rel="noopener noreferrer">empress-blog</a>
+        </footer>
+      </mmw.MobileMenu>
+    {{/unless}}
 
     <mbw.mobile-bar @isLocked={{false}} @isOverlay={{true}}>
       <header>
-        <mmw.Toggle><SvgIcons::Hamburger/></mmw.Toggle>
-
-        {{!--
-        <h1>
-          {{#if @site.logo}}
-            <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a>
-          {{else}}
-            <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
-          {{/if}}
-          {{this.blog.title}}
-        </h1>
-        <div></div>
-        --}}
+        {{#if (route-is "post")}}
+          <LinkTo @route="index">Back</LinkTo>
+        {{else}}
+          <mmw.Toggle><SvgIcons::Hamburger/></mmw.Toggle>
+        {{/if}}
+        <b class="mobile-bar__title">{{this.blog.title}}</b>
+        <div class="fake-toggle"></div>
       </header>
     </mbw.mobile-bar>
 
