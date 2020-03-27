@@ -32,18 +32,19 @@
 
     <mbw.mobile-bar @isLocked={{false}} @isOverlay={{true}}>
       <header>
-        <mmw.Toggle>Menu</mmw.Toggle>
+        <mmw.Toggle><SvgIcons::Hamburger/></mmw.Toggle>
 
-        {{!--<h1>
+        {{!--
+        <h1>
           {{#if @site.logo}}
             <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a>
           {{else}}
             <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
           {{/if}}
           {{this.blog.title}}
-        </h1>--}}
-
+        </h1>
         <div></div>
+        --}}
       </header>
     </mbw.mobile-bar>
 
