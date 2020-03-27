@@ -3,15 +3,19 @@ Re-usable card for linking to posts
 --}}
 
 <article local-class="post-card" ...attributes>
-  <LinkTo local-class="link" @route="post" @model={{@post.id}}>
-    <div local-class="image">
-      <img src={{@post.image}} alt={{@post.title}}>
-    </div>
-    <div local-class="content">
-      {{#if @post.primaryTag}}
-        <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
-      {{/if}}
-      <h2 local-class="title">{{@post.title}}</h2>
-    </div>
-  </LinkTo>
+  <AnimatedContainer>
+    {{#animated-value @post as |post|}}
+      <LinkTo local-class="link" @route="post" @model={{post.id}}>
+        <div local-class="image">
+          <img src={{post.image}} alt={{post.title}}>
+        </div>
+        <div local-class="content">
+          {{#if post.primaryTag}}
+            <span local-class="tag">{{if post.primaryTag.name post.primaryTag.name post.primaryTag}}</span>
+          {{/if}}
+          <h2 local-class="title">{{post.title}}</h2>
+        </div>
+      </LinkTo>
+    {{/animated-value}}
+  </AnimatedContainer>
 </article>

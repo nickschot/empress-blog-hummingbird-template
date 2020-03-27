@@ -3,19 +3,23 @@
     <h1 local-class="title">{{@post.title}}</h1>
   </header>--}}
 
-  {{#if @post.image}}
-    <header local-class="post-card">
-      <div local-class="image">
-        <img src={{@post.image}} alt={{@post.title}}>
-      </div>
-      <div local-class="content">
-        {{#if @post.primaryTag}}
-          <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
-        {{/if}}
-        <h2 local-class="title">{{@post.title}}</h2>
-      </div>
-    </header>
-  {{/if}}
+  <AnimatedContainer>
+    {{#if @post.image}}
+      {{#animated-value @post duration=(if (media "isMobile") 300 0) use=(if (media "isMobile") this.transition) as |post|}}
+        <header local-class="post-card">
+          <div local-class="image">
+            <img src={{post.image}} alt={{post.title}}>
+          </div>
+          <div local-class="content">
+            {{#if post.primaryTag}}
+              <span local-class="tag">{{if post.primaryTag.name post.primaryTag.name post.primaryTag}}</span>
+            {{/if}}
+            <h2 local-class="title">{{post.title}}</h2>
+          </div>
+        </header>
+      {{/animated-value}}
+    {{/if}}
+  </AnimatedContainer>
 
   <div local-class="body">
     {{markdown-to-html @post.content tagName=""}}
