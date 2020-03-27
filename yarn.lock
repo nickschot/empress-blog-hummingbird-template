@@ -2679,6 +2679,11 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
+body-scroll-lock@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-3.0.1.tgz#bacb9ebf64fef2498392a3b779f4943af2004fad"
+  integrity sha512-BYcnBAv6r3iKFDeYgG3ZMiOtxHDcHaev84he4vU4nB062A9MSUHsbVkrgsiSZlGCcWqoqGKCKTytSUhzuEjiCQ==
+
 body@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/body/-/body-5.1.0.tgz#e4ba0ce410a46936323367609ecb4e6553125069"
@@ -5677,13 +5682,16 @@ ember-mobile-bar@0.1.0-alpha.5:
     ember-resize-observer "^0.1.0"
     ember-responds-to "^1.5.0"
 
-ember-mobile-menu@nickschot/ember-mobile-menu#master:
-  version "2.0.0-beta.2"
-  resolved "https://codeload.github.com/nickschot/ember-mobile-menu/tar.gz/e887e3cdccd2456b13d7edf38f3cbbb5104bd079"
+ember-mobile-menu@^2.0.0-beta.3:
+  version "2.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/ember-mobile-menu/-/ember-mobile-menu-2.0.0-beta.3.tgz#df55a43085923aa8b8bf4348f1336bdc932b0974"
+  integrity sha512-zSbheVOA8t5XTT2lU7xcXzoJbXPf4KCmeu7DKe5MU8VFwehT7We59M0EeRVD1iE6WqsmEX7IVreJ2IojFySVtA==
   dependencies:
     "@ember/render-modifiers" "^1.0.2"
     "@glimmer/component" "^1.0.0"
     "@glimmer/tracking" "^1.0.0"
+    body-scroll-lock "^3.0.1"
+    ember-auto-import "^1.5.3"
     ember-cli-babel "^7.17.2"
     ember-cli-htmlbars "^4.2.2"
     ember-concurrency "^1.1.6"
