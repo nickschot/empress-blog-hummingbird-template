@@ -14,16 +14,21 @@ module.exports = {
       headerModules: [
         //'experiments/styles/app'
       ],
-      plugins: [
-        require('postcss-normalize', { browsers }),
-        require('postcss-preset-env')({
-          browsers,
-          stage: 3,
-          features: {
-            'nesting-rules': true
-          }
-        })
-      ]
+      plugins: {
+        before: [
+          require('postcss-nested')
+        ],
+        after: [
+          require('postcss-normalize', { browsers }),
+          require('postcss-preset-env')({
+            browsers,
+            stage: 3,
+            features: {
+              'nesting-rules': true
+            }
+          })
+        ]
+      }
     }
   }
 };

@@ -1,24 +1,26 @@
-:global(.mobile-bar) {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  touch-action: pan-x;
-  background: #FFF;
-  color: #333;
+:global {
+  .mobile-bar {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    touch-action: pan-x;
+    background: #FFF;
+    color: #333;
 
-  &:global(.mobile-bar--top) {
-    top: 0;
-  }
+    &--top {
+      top: 0;
+    }
 
-  &:global(.mobile-bar--bottom) {
-    bottom: 0;
-  }
+    &--bottom {
+      bottom: 0;
+    }
 
-  &:not(:global(.mobile-bar--locked)) {
-    will-change: transform;
-  }
+    &:not(&--locked) {
+      will-change: transform;
+    }
 
-  &:not(:global(.mobile-bar--dragging)) {
-    transition: transform 0.15s;
+    &:not(&--dragging) {
+      transition: transform 0.15s;
+    }
   }
 }

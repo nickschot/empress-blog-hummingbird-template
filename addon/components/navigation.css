@@ -1,20 +1,20 @@
 .navigation {
   padding: 0.5rem;
 
-  & h3 {
+  h3 {
     text-transform: uppercase;
     font-size: 0.8em;
     margin-bottom: 0;
   }
 
-  & ul {
+  ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 0;
     margin: 0 0 2rem;
   }
 
-  & a {
+  a {
     display: block;
     text-decoration: none;
     color: #333;
