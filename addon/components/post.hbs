@@ -1,12 +1,20 @@
 <article local-class="post">
-  <header local-class="header">
+  {{!--<header local-class="header">
     <h1 local-class="title">{{@post.title}}</h1>
-  </header>
+  </header>--}}
 
   {{#if @post.image}}
-    <div local-class="image">
-      <img src={{@post.image}} alt={{@post.title}}>
-    </div>
+    <header local-class="post-card">
+      <div local-class="image">
+        <img src={{@post.image}} alt={{@post.title}}>
+      </div>
+      <div local-class="content">
+        {{#if @post.primaryTag}}
+          <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
+        {{/if}}
+        <h2 local-class="title">{{@post.title}}</h2>
+      </div>
+    </header>
   {{/if}}
 
   <div local-class="body">

@@ -3,7 +3,10 @@ Re-usable card for linking to posts
 --}}
 
 <article local-class="post-card" ...attributes>
-  <LinkTo @route="post" @model={{@post.id}} style={{this.styles}}>
+  <LinkTo local-class="link" @route="post" @model={{@post.id}}>
+    <div local-class="image">
+      <img src={{@post.image}} alt={{@post.title}}>
+    </div>
     <div local-class="content">
       {{#if @post.primaryTag}}
         <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>

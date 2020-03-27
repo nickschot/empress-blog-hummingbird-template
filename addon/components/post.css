@@ -2,15 +2,47 @@
 
 }
 
-.title {
-  text-align: center;
-  font-size: 1.3em;
+.post-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  height: 60vh;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
   & img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+}
+
+.content {
+  z-index: 1;
+  width: calc(100vw - 5rem);
+}
+
+.tag {
+  text-transform: uppercase;
+  color: #FFF;
+  opacity: 0.8;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.title {
+  color: #FFF;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .body {
@@ -56,12 +88,16 @@
 }
 
 @media (min-width: 768px) {
-  .image {
-    & img {
-      max-width: calc(100% + 2rem);
-      margin-left: -1rem;
-      margin-right: -1rem;
-    }
+  .post-card {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    justify-content: center;
+    padding-bottom: 11rem;
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 768px;
   }
 
   .post {
