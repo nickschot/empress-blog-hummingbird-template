@@ -19,6 +19,7 @@
   }
 
   main {
+    padding-top: 45px;
     padding-bottom: 5rem;
   }
 
@@ -106,6 +107,12 @@
 
   .post-content-image .kg-image {
     width: 100%;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 2rem;
   }
 
   .post-feed {

@@ -12,14 +12,12 @@
         {{#if @post.primaryTag}}
           <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
         {{/if}}
-        <h2 local-class="title">{{@post.title}}</h2>
+        <h1 local-class="title">{{@post.title}}</h1>
       </div>
     </header>
   {{/if}}
 
-  <div local-class="body">
-    {{markdown-to-html @post.content tagName=""}}
-  </div>
+  <Content @content={{@post.content}}/>
 
   <footer local-class="footer">
     {{!-- There are two options for how we display the byline/author-info.

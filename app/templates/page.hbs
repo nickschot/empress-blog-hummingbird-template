@@ -1,9 +1,3 @@
 {{#let this.model as |post|}}
-  <article class="post-content {{this.post_class}} {{unless post.image 'no-image'}}">
-
-    <div class="post-content-body">
-      {{markdown-to-html post.content tagName=""}}
-    </div>
-
-  </article>
+  <Post @post={{post}}/>
 {{/let}}

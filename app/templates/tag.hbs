@@ -1,21 +1,17 @@
-{{#let model.tag as |tag|}}
-  <header class="page-head">
-    <h1 class="page-head-title">{{tag}}</h1>
-    <p class="page-head-description">
-      {{#if tag.description}}
-        {{tag.description}}
-      {{else}}
-        A collection of {{plural model.posts.length empty='posts' singular='% post' plural='% posts'}}
-      {{/if}}
-    </p>
-  </header>
-{{/let}}
+<header class="page-head">
+  <h1 class="page-title">{{if this.model.name this.model.name this.model.tag}}</h1>
+  <Description>
+    {{#if this.model.content}}
+      {{markdown-to-html this.model.content tagName=""}}
+    {{else}}
+      A collection of {{plural this.model.posts.length empty='posts' singular='% post' plural='% posts'}}
+    {{/if}}
+  </Description>
+</header>
 
 <div class="post-feed">
-  {{#each model.posts as |post|}}
-
-  {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+  {{#each this.model.posts as |post|}}
+    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
     <PostCard @post={{post}} />
-
   {{/each}}
 </div>

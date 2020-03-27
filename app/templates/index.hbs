@@ -1,6 +1,7 @@
 {{#if (route-is "index")}}
+  <h1 class="page-title">{{this.blog.title}}</h1>
   {{#if this.blog.description}}
-    <p>{{this.blog.description}}</p>
+    <Description @content={{this.blog.description}}/>
   {{/if}}
 {{/if}}
 
