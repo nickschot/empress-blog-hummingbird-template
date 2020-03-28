@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
   height: 6rem;
+
+  img {
+    width: 3.125rem;
+  }
 }
 
 .navigation {

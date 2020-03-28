@@ -33,8 +33,8 @@
     "ember-mobile-bar": "0.1.0-alpha.5",
     "ember-mobile-menu": "^2.0.0-beta.3",
     "ember-responsive": "^3.0.5",
-    "ember-responsive-image": "^1.0.0-rc.6",
     "ember-set-body-class": "^0.4.2",
+    "ember-web-app": "^4.0.0",
     "postcss-nested": "^4.2.1",
     "postcss-normalize": "^8.0.1",
     "postcss-preset-env": "^6.7.0",
@@ -61,6 +61,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^7.0.0",
+    "ember-responsive-image": "^1.0.0-rc.6",
     "ember-source": "~3.17.0",
     "ember-source-channel-url": "^2.0.1",
     "ember-template-lint": "^2.4.0",
@@ -83,7 +84,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "after": "empress-blog",
+    "after": ["empress-blog", "ember-cli-fastboot"],
     "demoURL": "https://empress-hummingbird.netlify.com"
   },
   "resolutions": {

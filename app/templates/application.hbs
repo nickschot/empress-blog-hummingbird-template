@@ -12,18 +12,6 @@
       as |mm|>
         <Navigation @linkToComponent={{mm.LinkTo}}/>
 
-        <div class="social-links">
-          {{#if @site.facebook}}
-            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
-          {{/if}}
-          {{#if @site.twitter}}
-            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
-          {{/if}}
-          {{#if this.blog.host}}
-            <a href={{concat "https://feedly.com/i/subscription/feed/" (encode this.blog.host) '/rss.xml'}} title="RSS" target="_blank" rel="noopener noreferrer">RSS</a>
-          {{/if}}
-        </div>
-
         <footer>
           &copy; {{date format="YYYY"}} {{this.blog.title}}
           <br>
@@ -32,7 +20,7 @@
       </mmw.MobileMenu>
     {{!/unless}}
 
-    <mbw.mobile-bar @isLocked={{false}} @isOverlay={{true}}>
+    <mbw.mobile-bar @isLocked={{true}} @isOverlay={{true}}>
       <header>
         {{#if (route-is "post")}}
           <LinkTo @route="index">Back</LinkTo>
@@ -49,7 +37,7 @@
         {{outlet}}
 
         <footer class="main-footer">
-          <SvgIcons::Hummingbird/>
+          <img src="/empress-blog-hummingbird-template/images/hummingbird.png" alt="Hummingbird">
         </footer>
       </main>
     </mmw.Content>

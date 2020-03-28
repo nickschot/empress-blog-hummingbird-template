@@ -26,6 +26,10 @@
       justify-content: center;
       align-items: center;
       height: 10rem;
+
+      img {
+        width: 50px;
+      }
     }
   }
 

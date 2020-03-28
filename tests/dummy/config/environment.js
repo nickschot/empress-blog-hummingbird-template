@@ -24,9 +24,10 @@ module.exports = function (environment) {
     },
 
     blog: {
-      title: 'empress-blog',
-      description: 'Static Blog System - Built with Ember',
-      logo: '/images/hummingbird.svg',
+      title: 'Hummingbird',
+      description: 'Template for Empress Blog - Built with Ember',
+      logo: '/empress-blog-hummingbird-template/images/hummingbird.png',
+      appIcon: '/empress-blog-hummingbird-template/images/hummingbird-app-icon.png',
       coverImage: '/images/blog-cover.jpg',
 
       navigation: [{
@@ -39,9 +40,9 @@ module.exports = function (environment) {
       }]
     },
 
-    fastboot: {
-      hostWhitelist: ['hummingbird.eu.ngrok.io', /^localhost:\d+$/]
-    }
+    /*fastboot: {
+      hostWhitelist: ['eu.ngrok.io', /^localhost:\d+$/]
+    }*/
   };
 
   if (environment === 'development') {
