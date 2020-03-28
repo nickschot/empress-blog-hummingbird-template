@@ -17,23 +17,7 @@ Re-usable card for linking to posts
     </div>
 
     <footer local-class="meta">
-      <ul local-class="author-list">
-        {{#each @post.authors as |author|}}
-          <li local-class="author-list-item">
-            <div local-class="author-name-tooltip">
-              {{author.name}}
-            </div>
-
-            {{#if author.image}}
-              <LinkTo @route="author" @model={{author.id}} local-class="static-avatar">
-                <img local-class="author-profile-image" src={{author.image}} alt={{author.name}}>
-              </LinkTo>
-            {{else}}
-              <LinkTo @route="author" @model={{author.id}} local-class="static-avatar author-profile-image"><SvgIcons::Avatar/></LinkTo>
-            {{/if}}
-          </li>
-        {{/each}}
-      </ul>
+      <AuthorList @authors={{@post.authors}}/>
 
       <span local-class="reading-time">{{reading-time @post}}</span>
     </footer>

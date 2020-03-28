@@ -1,0 +1,15 @@
+<div local-class="author" ...attributes>
+  {{#if @tooltip}}
+    <div local-class="tooltip">
+      {{@author.name}}
+    </div>
+  {{/if}}
+
+  {{#if @author.image}}
+    <LinkTo local-class="static-avatar {{@size}}" @route="author" @model={{@author.id}}>
+      <img local-class="profile-image" src={{@author.image}} alt={{@author.name}}>
+    </LinkTo>
+  {{else}}
+    <LinkTo local-class="static-avatar profile-image {{@size}}" @route="author" @model={{@author.id}}><SvgIcons::Avatar/></LinkTo>
+  {{/if}}
+</div>

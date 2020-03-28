@@ -34,9 +34,19 @@
   width: 100%;
 }
 
-.content {
+.content-wrapper {
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+
+.content {
   width: calc(100vw - 5rem);
+}
+
+.author-list {
+  margin-bottom: 0.5rem;
 }
 
 .tag {
@@ -62,9 +72,15 @@
     padding-bottom: 11rem;
   }
 
-  .content {
+  .content-wrapper {
     margin: 0 auto;
     max-width: calc(640px + 6rem);
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .author-list {
+    margin-bottom: 0;
   }
 
   .post {

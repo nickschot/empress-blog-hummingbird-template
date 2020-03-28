@@ -1,0 +1,16 @@
+.author-links {
+  display: flex;
+
+  a {
+    color: #777;
+    margin: 0.5rem;
+  }
+
+  svg {
+    width: 40px;
+
+    path {
+      stroke: #777;
+    }
+  }
+}

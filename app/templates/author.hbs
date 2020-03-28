@@ -1,29 +1,19 @@
 {{#let this.model as |author|}}
-  <header>
+  <header class="author-header">
+    <Author @author={{author}} @size="extra-large"/>
     <h1 class="page-title">{{author.name}}</h1>
     {{#if author.content}}
       <Description @content={{author.content}}/>
     {{/if}}
 
     <div class="author-meta">
-      <div class="author-links">
-        {{#if author.website}}
-          <a href={{author.website}} target="_blank" rel="noopener noreferrer"><SvgIcons::Website/></a>
-        {{/if}}
-        {{#if author.twitter}}
-          <a href="https://twitter.com/{{author.twitter}}" target="_blank" rel="noopener noreferrer"><SvgIcons::Twitter/></a>
-        {{/if}}
-        {{#if this.facebook}}
-          <a href="https://facebook.com/{{author.facebook}}" target="_blank" rel="noopener noreferrer"><SvgIcons::Facebook/></a>
-        {{/if}}
-        {{!-- <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">RSS</a> --}}
-      </div>
+      <AuthorLinks @author={{author}}/>
     </div>
   </header>
-{{/let}}
 
-<div class="post-feed">
-  {{#each this.author.posts as |post|}}
-    <PostCard @post={{post}} />
-  {{/each}}
-</div>
+  <div class="post-feed">
+    {{#each author.posts as |post|}}
+      <PostCard @post={{post}} />
+    {{/each}}
+  </div>
+{{/let}}

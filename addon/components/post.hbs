@@ -7,11 +7,14 @@
     {{else}}
       <div local-class="gradient image" style={{gradient-bg seed=@post.title}}></div>
     {{/if}}
-    <div local-class="content">
-      {{#if @post.primaryTag}}
-        <span local-class="tag">{{date @post}} &mdash; {{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
-      {{/if}}
-      <h1 local-class="title">{{@post.title}}</h1>
+    <div local-class="content-wrapper">
+      <div local-class="content">
+        {{#if @post.primaryTag}}
+          <span local-class="tag">{{date @post}} &mdash; {{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
+        {{/if}}
+        <h1 local-class="title">{{@post.title}}</h1>
+      </div>
+      <AuthorList local-class="author-list" @authors={{@post.authors}} @large={{true}}/>
     </div>
   </header>
 
