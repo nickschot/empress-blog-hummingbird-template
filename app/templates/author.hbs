@@ -1,20 +1,20 @@
 {{#let this.model as |author|}}
-  <header class="page-head">
-    <h1 class="page-head-title">{{author.name}}</h1>
+  <header>
+    <h1 class="page-title">{{author.name}}</h1>
     {{#if author.content}}
-      <p class="page-head-description">{{author.content}}</p>
+      <Description @content={{author.content}}/>
     {{/if}}
 
     <div class="author-meta">
       <div class="author-links">
         {{#if author.website}}
-          <a href={{author.website}} target="_blank" rel="noopener noreferrer">Website</a> <span class="divider">/</span>
+          <a href={{author.website}} target="_blank" rel="noopener noreferrer"><SvgIcons::Website/></a>
         {{/if}}
         {{#if author.twitter}}
-          <a href="https://twitter.com/{{author.twitter}}" target="_blank" rel="noopener noreferrer">Twitter</a> <span class="divider">/</span>
+          <a href="https://twitter.com/{{author.twitter}}" target="_blank" rel="noopener noreferrer"><SvgIcons::Twitter/></a>
         {{/if}}
         {{#if this.facebook}}
-          <a href="https://facebook.com/{{author.facebook}}" target="_blank" rel="noopener noreferrer">Facebook</a> <span class="divider">/</span>
+          <a href="https://facebook.com/{{author.facebook}}" target="_blank" rel="noopener noreferrer"><SvgIcons::Facebook/></a>
         {{/if}}
         {{!-- <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">RSS</a> --}}
       </div>

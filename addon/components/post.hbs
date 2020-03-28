@@ -9,7 +9,7 @@
     {{/if}}
     <div local-class="content">
       {{#if @post.primaryTag}}
-        <span local-class="tag">{{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
+        <span local-class="tag">{{date @post}} &mdash; {{if @post.primaryTag.name @post.primaryTag.name @post.primaryTag}}</span>
       {{/if}}
       <h1 local-class="title">{{@post.title}}</h1>
     </div>
