@@ -9,4 +9,8 @@ export default class Navigation extends Component {
   get tags() {
     return this.store.peekAll('tag');
   }
+
+  get authors() {
+    return this.store.peekAll('author');
+  }
 }

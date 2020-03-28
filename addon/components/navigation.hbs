@@ -1,4 +1,10 @@
 {{#let (if @linkToComponent @linkToComponent (component "link-to")) as |LinkTo|}}
+  {{#if this.blog.logo}}
+    <div local-class="logo">
+      <img src={{this.blog.logo}} alt={{this.blog.title}}>
+    </div>
+  {{/if}}
+
   <nav local-class="navigation" ...attributes>
     <h3>Menu</h3>
     <ul role="menu" local-class="main">
@@ -20,6 +26,15 @@
       {{#each (sort-by 'posts.length:desc' this.tags) as |tag|}}
         <li role="menuitem">
           <LinkTo @route="tag" @model={{tag.id}}>#&nbsp;{{tag.id}}</LinkTo>
+        </li>
+      {{/each}}
+    </ul>
+
+    <h3>Authors</h3>
+    <ul local-class="tags">
+      {{#each (sort-by 'posts.length:desc' this.authors) as |author|}}
+        <li role="menuitem">
+          <LinkTo @route="author" @model={{author.id}}>{{author.name}}</LinkTo>
         </li>
       {{/each}}
     </ul>

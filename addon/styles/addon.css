@@ -20,7 +20,13 @@
 
   main {
     padding-top: 45px;
-    padding-bottom: 5rem;
+
+    .main-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10rem;
+    }
   }
 
   p {
@@ -42,17 +48,21 @@
     .mobile-menu__tray {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
 
       @media (min-width: 768px) {
         border-right: 1px solid #CCC;
       }
 
       footer {
+        margin-top: auto;
         font-size: 0.8em;
         text-align: center;
         color: #999;
         padding: 1rem;
+
+        a {
+          color: #666;
+        }
       }
     }
 
@@ -95,6 +105,11 @@
 
       button {
         border: none;
+        transition: opacity 0.15s;
+
+        &:hover {
+          opacity: 0.3;
+        }
       }
 
       .mobile-bar__title {
