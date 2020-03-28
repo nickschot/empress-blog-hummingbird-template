@@ -153,7 +153,7 @@
     max-width: 60rem;
     margin: 0 auto;
 
-    @media (min-width: 45rem) {
+    @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
     }
   }

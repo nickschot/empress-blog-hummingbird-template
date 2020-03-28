@@ -2,7 +2,7 @@
   <MobileMenuWrapper
     @openDetectionWidth={{-1}}
   as |mmw|>
-    {{#unless (route-is "post")}}
+    {{!#unless (route-is "post")}}
       <mmw.MobileMenu
         @width={{90}}
         @maxWidth={{if (media "isMobile") -1 300}}
@@ -30,7 +30,7 @@
           Published with <a href="https://github.com/empress/empress-blog" target="_blank" rel="noopener noreferrer">empress-blog</a>
         </footer>
       </mmw.MobileMenu>
-    {{/unless}}
+    {{!/unless}}
 
     <mbw.mobile-bar @isLocked={{false}} @isOverlay={{true}}>
       <header>
