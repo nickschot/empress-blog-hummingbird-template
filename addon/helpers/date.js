@@ -1,27 +1,14 @@
 import { helper } from '@ember/component/helper';
-import { parse, distanceInWordsToNow, format } from 'date-fns';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
 
-export function date([post], hash) {
-  let date;
-
+export function date([post], { format = 'MMM DD, YYYY', timeago }) {
   // set to published_at by default, if it's available
   // otherwise, this will print the current date
-  if (post?.date) {
-      date = parse(post.date);
-  } else {
-      date = new Date();
-  }
+  const date = post?.date ? dayjs(post.date) : dayjs();
 
-  let _format = hash.format || 'MMM DD, YYYY';
-  let timeago = hash.timeago;
-
-  if (timeago) {
-      date = distanceInWordsToNow(date);
-  } else {
-      date = format(date, _format);
-  }
-
-  return (date);
+  return timeago ? date.fromNow() : date.format(format);
 }
 
 export default helper(date);
