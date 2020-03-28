@@ -50,7 +50,7 @@ module.exports = {
           sourceDir: 'images',
           destinationDir: 'responsive-images',
           quality: 80,
-          supportedWidths: [2000, 1000, 600, 300],
+          supportedWidths: [2000, 1000, 600, 300, 100],
           removeSourceDir: false,
           justCopy: false,
           extensions: ['jpg', 'jpeg', 'png', 'gif']
