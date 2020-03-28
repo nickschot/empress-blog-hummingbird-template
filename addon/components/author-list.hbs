@@ -1,7 +1,7 @@
 <ul local-class="author-list {{if @large "large"}}" ...attributes>
   {{#each @authors as |author|}}
     <li local-class="list-item">
-      <Author @author={{author}} @size={{if @large "large"}}/>
+      <Author @author={{author}} @size={{if @large "large"}} @tooltip={{true}}/>
     </li>
   {{/each}}
 </ul>
