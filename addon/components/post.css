@@ -73,10 +73,14 @@
   }
 
   .content-wrapper {
-    margin: 0 auto;
+    width: 100%;
     max-width: calc(640px + 6rem);
     align-items: flex-end;
     flex-direction: row;
+
+    .content {
+      width: 100%;
+    }
   }
 
   .author-list {
