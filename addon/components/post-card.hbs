@@ -6,7 +6,7 @@ Re-usable card for linking to posts
   <LinkTo local-class="link" @route="post" @model={{@post.id}} style={{unless @post.image (gradient-bg seed=@post.title)}}>
     {{#if @post.image}}
       <div local-class="image">
-        <img src={{@post.image}} alt={{@post.title}}>
+        <ResponsiveImage @image={{responsive-image-url @post.image}} @alt={{@post.title}}/>
       </div>
     {{/if}}
     <div local-class="content">

@@ -42,5 +42,20 @@ if (process.env.ANALYZE_BUNDLE) {
 
 module.exports = {
   name: require('./package').name,
-  options
+  options,
+  config(env, config) {
+    if(!config['responsive-image']) {
+      return {
+        'responsive-image': {
+          sourceDir: 'images',
+          destinationDir: 'responsive-images',
+          quality: 80,
+          supportedWidths: [2000, 1000, 600, 300],
+          removeSourceDir: false,
+          justCopy: false,
+          extensions: ['jpg', 'jpeg', 'png', 'gif']
+        }
+      }
+    }
+  },
 };

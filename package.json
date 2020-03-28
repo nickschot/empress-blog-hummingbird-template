@@ -33,6 +33,7 @@
     "ember-mobile-bar": "0.1.0-alpha.5",
     "ember-mobile-menu": "^2.0.0-beta.3",
     "ember-responsive": "^3.0.5",
+    "ember-responsive-image": "^1.0.0-rc.6",
     "ember-set-body-class": "^0.4.2",
     "postcss-nested": "^4.2.1",
     "postcss-normalize": "^8.0.1",
@@ -84,5 +85,8 @@
     "configPath": "tests/dummy/config",
     "after": "empress-blog",
     "demoURL": "https://empress-hummingbird.netlify.com"
+  },
+  "resolutions": {
+    "sharp": "^0.25.2"
   }
 }
