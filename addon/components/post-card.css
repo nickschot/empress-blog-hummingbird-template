@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 20rem;
   overflow: hidden;
   border-radius: 1rem;
 
@@ -37,6 +36,10 @@
   }*/
 }
 
+.with-image .link {
+  height: 20rem;
+}
+
 .image {
   position: absolute;
   top: 0;
@@ -57,7 +60,7 @@
 }
 
 .content {
-  padding: 0 1.5rem;
+  padding: 1.5rem 1.5rem 0;
 }
 
 .tag {
@@ -158,4 +161,10 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-shadow: 0.5px 0.5px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+  .link {
+    height: 20rem;
+  }
 }
