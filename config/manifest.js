@@ -37,6 +37,7 @@ module.exports = function(environment, appConfig) {
     short_name: appConfig.blog.title || 'empress-blog-hummingbird-template',
     description: appConfig.blog.description || '',
     start_url: '/',
+    scope: '/',
     display: 'standalone',
     background_color: '#fafbfc',
     theme_color: '#fff',

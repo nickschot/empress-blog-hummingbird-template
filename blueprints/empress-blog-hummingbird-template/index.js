@@ -1,6 +1,6 @@
 /* eslint-env node */
-//const recast = require('recast');
-//const { readFileSync, writeFileSync } = require('fs');
+const recast = require('recast');
+const { readFileSync, writeFileSync } = require('fs');
 
 module.exports = {
   description: 'The default blueprint for empress-blog-hummingbird-template.',
@@ -9,7 +9,7 @@ module.exports = {
     // no-op
   },
 
-  /*afterInstall() {
+  afterInstall() {
     return this.addAddonsToProject({
       packages: [
         'ember-responsive-image',
@@ -72,5 +72,5 @@ module.exports = {
 
       writeFileSync(configFile, recast.print(configAst, { tabWidth: 2, quote: 'single' }).code);
     });
-  },*/
+  },
 };
