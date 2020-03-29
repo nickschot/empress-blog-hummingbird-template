@@ -27,7 +27,7 @@ module.exports = function (environment) {
       title: 'Hummingbird',
       description: 'Template for Empress Blog - Built with Ember',
       logo: '/empress-blog-hummingbird-template/images/hummingbird.png',
-      appIcon: '/empress-blog-hummingbird-template/images/hummingbird-app-icon.png',
+      appIcon: '',
       coverImage: '/images/blog-cover.jpg',
 
       navigation: [{
