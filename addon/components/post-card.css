@@ -19,7 +19,7 @@
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 
   /* TODO: remove this when ember-animating */
-  /*transition: transform 0.3s;
+  transition: transform 0.3s;
 
   &:hover, &:active {
     transform: scale(0.95);
@@ -33,7 +33,7 @@
     &:active {
       transform: scale(0.98);
     }
-  }*/
+  }
 }
 
 .with-image .link {
