@@ -20,7 +20,8 @@
       </mmw.MobileMenu>
     {{!/unless}}
 
-    <mbw.mobile-bar @isLocked={{true}} @isOverlay={{true}}>
+    {{! template-lint-disable no-inline-styles style-concatenation }}
+    <mbw.mobile-bar @isLocked={{true}} @isOverlay={{true}} style={{if (media "isMobile") "transform: translateY(-{{linear-map-range mmw.relativePosition 0 1 0 100}}%)"}}>
       <header>
         {{#if (route-is "post")}}
           <LinkTo @route="index">Back</LinkTo>

@@ -1,6 +1,7 @@
 import { helper } from '@ember/component/helper';
 import { htmlSafe } from '@ember/string';
 import seedrandom from 'seedrandom/seedrandom';
+import { linearMap } from './linear-map-range';
 
 const gradients = [
   `#1CB5E0 0%, #000851 100%`,
@@ -19,10 +20,6 @@ const gradients = [
   `#f8ff00 0%, #3ad59f 100%`,
   `#fcff9e 0%, #c67700 100%`,
 ];
-
-function linearMap(input, x1, x2, y1, y2) {
-  return y1 + (y2 - y1) / (x2 - x1) * (input - x1);
-}
 
 function gradientBg(params, { seed, angle = 90 }) {
   const rng = seedrandom(seed);

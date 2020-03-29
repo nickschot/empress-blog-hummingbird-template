@@ -70,13 +70,6 @@
       }
     }
 
-    .mobile-menu--dragging ~ .mobile-bar,
-    .mobile-menu--open ~ .mobile-bar,
-    .mobile-menu--transitioning ~ .mobile-bar
-    {
-      transform: translateY(-100%)!important;
-    }
-
     @media (max-width: 767px) {
       .mobile-menu--open ~ .mobile-menu-wrapper__content {
         > * {
@@ -92,7 +85,7 @@
 
   .mobile-bar {
     z-index: 9999;
-    transition: all 0.3s!important;
+    transition: background 0.3s, color 0.3s!important;
 
     > header {
       display: flex;
