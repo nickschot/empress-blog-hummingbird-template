@@ -70,15 +70,16 @@ module.exports = {
                   builders.property('init', builders.identifier('sourceDir'), builders.literal('images')),
                   builders.property('init', builders.identifier('destinationDir'), builders.literal('responsive-images')),
                   builders.property('init', builders.identifier('quality'), builders.literal(80)),
-                  builders.property('init', builders.identifier('supportedWidths'), builders.arrayPattern([
+                  builders.property('init', builders.identifier('supportedWidths'), builders.arrayExpression([
                     builders.literal(2000),
                     builders.literal(1000),
                     builders.literal(600),
                     builders.literal(300),
+                    builders.literal(100),
                   ])),
                   builders.property('init', builders.identifier('removeSourceDir'), builders.literal(false)),
                   builders.property('init', builders.identifier('justCopy'), builders.literal(false)),
-                  builders.property('init', builders.identifier('extensions'), builders.arrayPattern([
+                  builders.property('init', builders.identifier('extensions'), builders.arrayExpression([
                     builders.literal('jpg'),
                     builders.literal('jpeg'),
                     builders.literal('png'),
