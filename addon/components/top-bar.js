@@ -10,7 +10,7 @@ export default class TopBarComponent extends Component {
     let style = '';
 
     if (this.media.isMobile) {
-      style = `transform: translateY(-${linearMapRange(this.args.relativePosition, 0, 1, 0, 100)}%);`;
+      style = `transform: translateY(calc(-${linearMapRange(this.args.relativePosition, 0, 1, 0, 100)}% - 1px));`;
     } else {
       style = `margin-left: ${this.args.position}px; width: calc(100% - ${this.args.position}px);`;
     }
