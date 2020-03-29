@@ -5,11 +5,21 @@
     </div>
   {{/if}}
 
-  {{#if @author.image}}
-    <LinkTo local-class="static-avatar {{@size}}" @route="author" @model={{@author.id}}>
-      <ResponsiveImage local-class="profile-image" @image={{responsive-image-url @author.image}} @alt={{@author.name}} @sizes={{if @size "160px" "30px"}}/>
-    </LinkTo>
+  {{#if @link}}
+    {{#if @author.image}}
+      <LinkTo local-class="static-avatar {{@size}}" @route="author" @model={{@author.id}}>
+        <ResponsiveImage local-class="profile-image" @image={{responsive-image-url @author.image}} @alt={{@author.name}} @sizes={{if @size "160px" "30px"}}/>
+      </LinkTo>
+    {{else}}
+      <LinkTo local-class="static-avatar profile-image {{@size}}" @route="author" @model={{@author.id}}><SvgIcons::Avatar/></LinkTo>
+    {{/if}}
   {{else}}
-    <LinkTo local-class="static-avatar profile-image {{@size}}" @route="author" @model={{@author.id}}><SvgIcons::Avatar/></LinkTo>
+    {{#if @author.image}}
+      <span local-class="static-avatar {{@size}}">
+        <ResponsiveImage local-class="profile-image" @image={{responsive-image-url @author.image}} @alt={{@author.name}} @sizes={{if @size "160px" "30px"}}/>
+      </span>
+    {{else}}
+      <span local-class="static-avatar profile-image {{@size}}"><SvgIcons::Avatar/></span>
+    {{/if}}
   {{/if}}
 </div>

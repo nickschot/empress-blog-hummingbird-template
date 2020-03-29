@@ -17,7 +17,7 @@ Re-usable card for linking to posts
     </div>
 
     <footer local-class="meta">
-      <AuthorList @authors={{@post.authors}}/>
+      <AuthorList @authors={{@post.authors}} @link={{false}}/>
 
       <span local-class="reading-time">{{reading-time @post}}</span>
     </footer>
