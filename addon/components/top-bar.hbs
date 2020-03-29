@@ -8,7 +8,7 @@
       {{#if (route-is "post")}}
         <LinkTo @route="index">Back</LinkTo>
       {{else}}
-        <c.Toggle><SvgIcons::Hamburger/></c.Toggle>
+        <c.Toggle aria-label="Toggle navigation"><SvgIcons::Hamburger/></c.Toggle>
       {{/if}}
       <b class="mobile-bar__title">{{@title}}</b>
       <div class="fake-toggle"></div>

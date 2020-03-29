@@ -7,9 +7,9 @@
 
   <nav local-class="navigation" ...attributes>
     <h3>Menu</h3>
-    <ul role="menu" local-class="main">
+    <ul local-class="main">
       {{#each this.blog.navigation as |navigation|}}
-        <li role="menuitem">
+        <li>
           {{#if navigation.id}}
             <LinkTo @route={{navigation.route}} @model={{navigation.id}}>{{navigation.label}}</LinkTo>
           {{else if navigation.route}}
@@ -24,7 +24,7 @@
     <h3>Tags</h3>
     <ul local-class="tags">
       {{#each (sort-by 'posts.length:desc' this.tags) as |tag|}}
-        <li role="menuitem">
+        <li>
           <LinkTo @route="tag" @model={{tag.id}}>#&nbsp;{{tag.id}}</LinkTo>
         </li>
       {{/each}}
@@ -33,7 +33,7 @@
     <h3>Authors</h3>
     <ul local-class="tags">
       {{#each (sort-by 'posts.length:desc' this.authors) as |author|}}
-        <li role="menuitem">
+        <li>
           <LinkTo @route="author" @model={{author.id}}>{{author.name}}</LinkTo>
         </li>
       {{/each}}
