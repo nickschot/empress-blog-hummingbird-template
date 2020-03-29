@@ -5113,19 +5113,6 @@ ember-cli-htmlbars@^4.0.0, ember-cli-htmlbars@^4.2.2, ember-cli-htmlbars@^4.2.3:
     strip-bom "^4.0.0"
     walk-sync "^2.0.2"
 
-ember-cli-image-transformer@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-image-transformer/-/ember-cli-image-transformer-4.0.0.tgz#c4472e0e3a5ae8ea83fc550a7375957c5b69869c"
-  integrity sha512-tvXx8Mw7EGk/SggKsVpwAKKpnnPr85y/ImJSUaG4ZqzRnnKW0DeOQty7rameiCeb8eT0wLWXiDfd7WByCJ9axA==
-  dependencies:
-    broccoli-caching-writer "^3.0.3"
-    broccoli-funnel "^3.0.2"
-    broccoli-merge-trees "^4.1.0"
-    ember-cli-babel "^7.17.2"
-    ember-cli-htmlbars "^4.2.2"
-    rsvp "^4.7.0"
-    sharp "^0.25.1"
-
 ember-cli-import-polyfill@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/ember-cli-import-polyfill/-/ember-cli-import-polyfill-0.2.0.tgz#c1a08a8affb45c97b675926272fe78cf4ca166f2"
@@ -11434,7 +11421,7 @@ sha.js@^2.4.0, sha.js@^2.4.8:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-sharp@^0.21.1, sharp@^0.25.1, sharp@^0.25.2:
+sharp@^0.21.1, sharp@^0.25.2:
   version "0.25.2"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.25.2.tgz#f9003d73be50e9265e98f79f04fe53d8c66a3967"
   integrity sha512-l1GN0kFNtJr3U9i9pt7a+vo2Ij0xv4tTKDIPx8W6G9WELhPwrMyZZJKAAQNBSI785XB4uZfS5Wpz8C9jWV4AFQ==

@@ -57,5 +57,14 @@ module.exports = {
         }
       }
     }
+  },
+
+  contentFor(type, config) {
+    if (type === 'head') {
+      return `
+        <link rel="manifest" href="${config.rootURL}manifest.webmanifest">
+        <meta name="msapplication-config" content="${config.rootURL}browserconfig.xml">
+      `;
+    }
   }
 };
