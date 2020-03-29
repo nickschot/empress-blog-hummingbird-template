@@ -1,12 +1,26 @@
 /* eslint-env node */
 const recast = require('recast');
 const { readFileSync, writeFileSync } = require('fs');
+const stringUtils = require('ember-cli-string-utils');
 
 module.exports = {
   description: 'The default blueprint for empress-blog-hummingbird-template.',
 
   normalizeEntityName() {
     // no-op
+  },
+
+  locals: function(options) {
+    let packageName = options.project.name();
+    let dasherizedPackageName = stringUtils.dasherize(packageName);
+
+    if(options.project.isEmberCLIAddon()) {
+      dasherizedPackageName = 'dummy';
+    }
+
+    return {
+      dasherizedPackageName,
+    };
   },
 
   afterInstall() {
