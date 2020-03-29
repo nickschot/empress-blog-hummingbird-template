@@ -1,7 +1,7 @@
 ---
 name: Nick Schot
 id: nick
-image: 
+image: /images/nick.jpg
 cover:
 website: https://nickschot.nl
 twitter: nickschot
