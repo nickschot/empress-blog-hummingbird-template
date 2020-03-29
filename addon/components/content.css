@@ -103,7 +103,7 @@
     img[src$="#full"] {
       margin-left: -3rem;
       margin-right: -3rem;
-      max-width: calc(100% + 6rem);
+      width: calc(100% + 6rem);
     }
   }
 }
