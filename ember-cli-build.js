@@ -6,6 +6,17 @@ module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
     fingerprint: {
       extensions: ['js', 'css', 'map']
+    },
+
+    'ember-cli-image-transformer': {
+      images: [
+        {
+          inputFilename: 'public/images/hummingbird-app-icon.png',
+          outputFileName: 'hummingbird-app-icon@',
+          convertTo: 'png',
+          sizes: [32, 192, 280, 512],
+        }
+      ]
     }
   });
 
