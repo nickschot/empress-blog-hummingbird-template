@@ -84,7 +84,10 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "after": ["empress-blog", "ember-cli-fastboot"],
+    "after": [
+      "empress-blog",
+      "ember-cli-fastboot"
+    ],
     "demoURL": "https://empress-hummingbird.netlify.com"
   },
   "resolutions": {
