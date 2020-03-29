@@ -86,7 +86,8 @@
     "configPath": "tests/dummy/config",
     "after": [
       "empress-blog",
-      "ember-cli-fastboot"
+      "ember-cli-fastboot",
+      "ember-mobile-menu"
     ],
     "demoURL": "https://empress-hummingbird.netlify.com"
   },
