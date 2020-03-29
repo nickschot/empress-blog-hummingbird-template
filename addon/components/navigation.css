@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6rem;
+
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 
   img {
     width: 3.125rem;
