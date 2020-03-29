@@ -1,7 +1,7 @@
 import { helper } from '@ember/component/helper';
 import { htmlSafe } from '@ember/string';
 import seedrandom from 'seedrandom/seedrandom';
-import { linearMap } from './linear-map-range';
+import { linearMapRange } from './linear-map-range';
 
 const gradients = [
   `#1CB5E0 0%, #000851 100%`,
@@ -23,7 +23,7 @@ const gradients = [
 
 function gradientBg(params, { seed, angle = 90 }) {
   const rng = seedrandom(seed);
-  const index = Math.round(linearMap(rng(), 0, 1, 0, gradients.length - 1));
+  const index = Math.round(linearMapRange(rng(), 0, 1, 0, gradients.length - 1));
   return htmlSafe(`background: linear-gradient(${angle}deg, ${gradients[index]})`);
 }
 

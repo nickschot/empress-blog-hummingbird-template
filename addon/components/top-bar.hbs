@@ -1,0 +1,17 @@
+{{#let (hash
+  MobileBar=@mobileBar
+  Toggle=@toggle
+) as |c|}}
+  {{! template-lint-disable no-inline-styles style-concatenation }}
+  <c.MobileBar @isLocked={{true}} @isOverlay={{true}} style={{this.styles}} ...attributes>
+    <header>
+      {{#if (route-is "post")}}
+        <LinkTo @route="index">Back</LinkTo>
+      {{else}}
+        <c.Toggle><SvgIcons::Hamburger/></c.Toggle>
+      {{/if}}
+      <b class="mobile-bar__title">{{@title}}</b>
+      <div class="fake-toggle"></div>
+    </header>
+  </c.MobileBar>
+{{/let}}
