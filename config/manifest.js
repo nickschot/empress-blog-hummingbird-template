@@ -6,17 +6,16 @@ module.exports = function(environment, appConfig) {
   // See https://zonkyio.github.io/ember-web-app for a list of
   // supported properties
 
-  const defaultLogo = size => `/assets/icons/hummingbird-app-icon@${size}.png`;
+  const defaultLogo = size => `/empress-blog-hummingbird-template/app-icons/hummingbird-app-icon-${size}.png`;
   const logo = appConfig.blog.appIcon || appConfig.blog.logo;
   const ext = logo ? logo.split('.')[1] : 'png';
 
   let icons = [];
-  if (!logo) {
+  if (!appConfig.blog.appIcon) {
     icons = [
       {
         src: defaultLogo(32),
         sizes: `32x32`,
-        type: `image/${ext}`,
         targets: ['favicon']
       },
       ...[192, 280, 512].map(size => ({
@@ -24,6 +23,11 @@ module.exports = function(environment, appConfig) {
         sizes: `${size}x${size}`,
         type: `image/${ext}`,
         targets: ['apple']
+      })),
+      ...[192, 280, 512].map(size => ({
+        src: defaultLogo(size),
+        sizes: `${size}x${size}`,
+        type: `image/${ext}`
       }))
     ];
   }
@@ -36,6 +40,6 @@ module.exports = function(environment, appConfig) {
     display: 'standalone',
     background_color: '#fafbfc',
     theme_color: '#fff',
-    icons
+    icons: icons
   };
 };
