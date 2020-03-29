@@ -1,6 +1,7 @@
 /* eslint-env node */
 const recast = require('recast');
 const { readFileSync, writeFileSync } = require('fs');
+const path = require('path');
 const stringUtils = require('ember-cli-string-utils');
 
 module.exports = {
@@ -8,6 +9,18 @@ module.exports = {
 
   normalizeEntityName() {
     // no-op
+  },
+
+  fileMapTokens: function() {
+    let isAddon = this.project.isEmberCLIAddon();
+    return {
+      __base__() {
+        if(isAddon) {
+          return path.join('tests', 'dummy');
+        }
+        return '';
+      }
+    }
   },
 
   locals: function(options) {
