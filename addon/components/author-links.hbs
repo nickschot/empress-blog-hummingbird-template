@@ -1,12 +1,12 @@
 <div local-class="author-links" ...attributes>
   {{#if @author.website}}
-    <a href={{@author.website}} target="_blank" rel="noopener noreferrer" title="Website"><SvgIcons::Website/></a>
+    <a href={{@author.website}} target="_blank" rel="noopener noreferrer" title="Website" aria-label="Website"><SvgIcons::Website/></a>
   {{/if}}
   {{#if @author.twitter}}
-    <a href="https://twitter.com/{{@author.twitter}}" target="_blank" rel="noopener noreferrer" title="Twitter"><SvgIcons::Twitter/></a>
+    <a href="https://twitter.com/{{@author.twitter}}" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><SvgIcons::Twitter/></a>
   {{/if}}
   {{#if @author.facebook}}
-    <a href="https://facebook.com/{{@author.facebook}}" target="_blank" rel="noopener noreferrer" title="Facebook"><SvgIcons::Facebook/></a>
+    <a href="https://facebook.com/{{@author.facebook}}" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><SvgIcons::Facebook/></a>
   {{/if}}
   {{!-- <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">RSS</a> --}}
 </div>
