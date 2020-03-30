@@ -17,4 +17,14 @@ export default class TopBarComponent extends Component {
 
     return htmlSafe(style);
   }
+
+  get headerStyles() {
+    let style = '';
+
+    if (this.media.isMobile) {
+      style = `opacity: ${1 - Math.min(this.args.relativePosition * 2, 1)};`;
+    }
+
+    return htmlSafe(style);
+  }
 }

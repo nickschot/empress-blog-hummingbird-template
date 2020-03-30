@@ -41,12 +41,8 @@
     overflow: hidden;
     min-width: 100vw;
 
-    &, .mobile-menu-wrapper__content {
-      min-height: 100vh;
-
-      & > * {
-        transition: opacity 0.3s;
-      }
+    .mobile-menu-wrapper__content > * {
+      transition: opacity 0.3s;
     }
 
     .mobile-menu__tray {

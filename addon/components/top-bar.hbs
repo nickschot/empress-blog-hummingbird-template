@@ -2,9 +2,8 @@
   MobileBar=@mobileBar
   Toggle=@toggle
 ) as |c|}}
-  {{! template-lint-disable no-inline-styles style-concatenation }}
   <c.MobileBar @isLocked={{true}} @isOverlay={{true}} style={{this.styles}} ...attributes>
-    <header>
+    <header style={{this.headerStyles}}>
       {{#if (route-is "post")}}
         <LinkTo @route="index">Back</LinkTo>
       {{else}}
