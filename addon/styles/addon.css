@@ -67,9 +67,13 @@
     }
 
     @media (max-width: 767px) {
-      .mobile-menu--open ~ .mobile-menu-wrapper__content {
-        > * {
-          opacity: 0.5;
+      .mobile-menu--open ~ .mobile-menu-wrapper__content > * {
+        opacity: 0.5;
+      }
+
+      .mobile-menu--open, .mobile-menu--dragging, .mobile-menu--transitioning {
+        & ~ .mobile-menu-wrapper__content > * {
+          pointer-events: none;
         }
       }
     }
