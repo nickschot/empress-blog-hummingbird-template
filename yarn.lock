@@ -6129,7 +6129,7 @@ emojis-list@^3.0.0:
 
 empress-blog@empress/empress-blog#fix-lodash-import:
   version "1.9.0"
-  resolved "https://codeload.github.com/empress/empress-blog/tar.gz/77eeac6284b73c067ec1b37885ab6554aa89ccc8"
+  resolved "https://codeload.github.com/empress/empress-blog/tar.gz/db2749544812b69151be1e8699cb99bbebfd1cf4"
   dependencies:
     broccoli-funnel "^3.0.3"
     broccoli-merge-trees "^3.0.0"
