@@ -72,7 +72,7 @@
       }
 
       .mobile-menu--open, .mobile-menu--dragging, .mobile-menu--transitioning {
-        & ~ .mobile-menu-wrapper__content > * {
+        & ~ .mobile-menu-wrapper__content > *:not(.mobile-menu__mask) {
           pointer-events: none;
         }
       }
