@@ -12,7 +12,7 @@
   </header>
 
   <div class="post-feed">
-    {{#each author.posts as |post|}}
+    {{#each author.posts key="id" as |post|}}
       <PostCard @post={{post}} />
     {{/each}}
   </div>

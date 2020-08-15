@@ -1,5 +1,5 @@
 <ul local-class="author-list {{if @large "large"}}" ...attributes>
-  {{#each @authors as |author|}}
+  {{#each @authors key="id" as |author|}}
     <li local-class="list-item">
       <Author @author={{author}} @size={{if @large "large"}} @tooltip={{true}} @link={{@link}}/>
     </li>
