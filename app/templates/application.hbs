@@ -1,6 +1,7 @@
 <MobileBarWrapper as |mbw|>
   <MobileMenuWrapper
     @openDetectionWidth={{-1}}
+    @preventScroll={{media "isMobile"}}
   as |mmw|>
     {{!#unless (route-is "post")}}
       <mmw.MobileMenu
