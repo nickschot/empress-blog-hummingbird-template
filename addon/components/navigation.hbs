@@ -8,7 +8,7 @@
   <nav local-class="navigation" ...attributes>
     <h3>Menu</h3>
     <ul local-class="main">
-      {{#each this.blog.navigation as |navigation|}}
+      {{#each this.blog.navigation key="id" as |navigation|}}
         <li>
           {{#if navigation.id}}
             <LinkTo @route={{navigation.route}} @model={{navigation.id}}>{{navigation.label}}</LinkTo>
@@ -23,7 +23,7 @@
 
     <h3>Tags</h3>
     <ul local-class="tags">
-      {{#each (sort-by 'posts.length:desc' this.tags) as |tag|}}
+      {{#each (sort-by 'posts.length:desc' this.tags) key="id" as |tag|}}
         <li>
           <LinkTo @route="tag" @model={{tag.id}}>#&nbsp;{{tag.id}}</LinkTo>
         </li>
@@ -32,7 +32,7 @@
 
     <h3>Authors</h3>
     <ul local-class="tags">
-      {{#each (sort-by 'posts.length:desc' this.authors) as |author|}}
+      {{#each (sort-by 'posts.length:desc' this.authors) key="id" as |author|}}
         <li>
           <LinkTo @route="author" @model={{author.id}}>{{author.name}}</LinkTo>
         </li>

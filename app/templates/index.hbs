@@ -7,7 +7,7 @@
 {{/if}}
 
 <div class="post-feed">
-  {{#each (sort-by 'date:desc' this.model) as |post index|}}
+  {{#each (sort-by 'date:desc' this.model) key="id" as |post index|}}
     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
     <PostCard @post={{post}} @index={{index}} class="post-card"/>
   {{/each}}

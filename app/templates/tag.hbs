@@ -10,7 +10,7 @@
 </header>
 
 <div class="post-feed">
-  {{#each this.model.posts as |post|}}
+  {{#each this.model.posts key="id" as |post|}}
     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
     <PostCard @post={{post}} />
   {{/each}}
