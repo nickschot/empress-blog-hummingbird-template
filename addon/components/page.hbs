@@ -1,0 +1,8 @@
+{{#let (get (service "scroll") "isLoading") as |isLoading|}}
+  <div local-class="page {{if isLoading "loading"}}" ...attributes>
+    {{yield}}
+    <div local-class="overlay {{if isLoading "loading"}}" aria-hidden={{not isLoading}}>
+      <IonSpinner @name="lines-small"/>
+    </div>
+  </div>
+{{/let}}
