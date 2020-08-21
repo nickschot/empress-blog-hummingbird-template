@@ -45,13 +45,15 @@
       transition: opacity 0.3s;
     }
 
+    @media (min-width: 768px) {
+      .mobile-menu-wrapper__content {
+        box-shadow: 0 0 0 1px #CCC;
+      }
+    }
+
     .mobile-menu__tray {
       display: flex;
       flex-direction: column;
-
-      @media (min-width: 768px) {
-        border-right: 1px solid #CCC;
-      }
 
       footer {
         margin-top: auto;
