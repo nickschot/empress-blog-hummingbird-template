@@ -27,6 +27,10 @@
     margin: 0 0 2rem;
   }
 
+  li::before {
+    display: none;
+  }
+
   a {
     display: block;
     text-decoration: none;
