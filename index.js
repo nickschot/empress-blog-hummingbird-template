@@ -53,7 +53,12 @@ module.exports = {
           supportedWidths: [2000, 1000, 600, 300, 100],
           removeSourceDir: false,
           justCopy: false,
-          extensions: ['jpg', 'jpeg', 'png', 'gif']
+          extensions: ['jpg', 'jpeg', 'png', 'gif'],
+          lqip: {
+            type: 'inline',
+            width: 100,
+            quality: 70
+          }
         }
       }
     }
