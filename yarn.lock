@@ -5982,9 +5982,9 @@ ember-router-generator@^2.0.0:
     "@babel/traverse" "^7.4.5"
     recast "^0.18.1"
 
-ember-scroll-on-click@nickschot/ember-scroll-on-click:
+"ember-scroll-on-click@github:simplabs/ember-scroll-on-click":
   version "0.0.0"
-  resolved "https://codeload.github.com/nickschot/ember-scroll-on-click/tar.gz/e0217c1f3215d3f0d488837a719c86f011f5d36f"
+  resolved "https://codeload.github.com/simplabs/ember-scroll-on-click/tar.gz/72d514c54cf4f3d08281ae0cb7321092afb07470"
   dependencies:
     ember-cli-babel "^7.21.0"
     ember-cli-htmlbars "^5.2.0"
