@@ -37,7 +37,7 @@
     "ember-in-viewport": "^3.7.2",
     "ember-ion-spinner": "^1.0.0",
     "ember-mobile-bar": "0.1.0-alpha.5",
-    "ember-mobile-menu": "^2.0.1",
+    "ember-mobile-menu": "^2.0.4",
     "ember-responsive": "^4.0.0",
     "ember-scroll-on-click": "github:simplabs/ember-scroll-on-click",
     "ember-service-helper": "^0.1.0",

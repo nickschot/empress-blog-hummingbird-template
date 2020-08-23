@@ -3579,7 +3579,7 @@ broccoli-stew@^3.0.0:
     symlink-or-copy "^1.2.0"
     walk-sync "^1.1.3"
 
-broccoli-string-replace@^0.1.2:
+broccoli-string-replace@^0.1.1, broccoli-string-replace@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/broccoli-string-replace/-/broccoli-string-replace-0.1.2.tgz#1ed92f85680af8d503023925e754e4e33676b91f"
   integrity sha1-HtkvhWgK+NUDAjkl51Tk4zZ2uR8=
@@ -5174,7 +5174,7 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.11.0, ember-cli-babel@^6.16.0,
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.17.2, ember-cli-babel@^7.18.0, ember-cli-babel@^7.19.0, ember-cli-babel@^7.20.5, ember-cli-babel@^7.21.0, ember-cli-babel@^7.22.1, ember-cli-babel@^7.7.3:
+ember-cli-babel@^7.0.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.17.2, ember-cli-babel@^7.18.0, ember-cli-babel@^7.19.0, ember-cli-babel@^7.20.5, ember-cli-babel@^7.21.0, ember-cli-babel@^7.22.1, ember-cli-babel@^7.7.3:
   version "7.22.1"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.22.1.tgz#cad28b89cf0e184c93b863d09bc5ba4ce1d2e453"
   integrity sha512-kCT8WbC1AYFtyOpU23ESm22a+gL6fWv8Nzwe8QFQ5u0piJzM9MEudfbjADEaoyKTrjMQTDsrWwEf3yjggDsOng==
@@ -5301,7 +5301,7 @@ ember-cli-htmlbars@^3.0.0:
     json-stable-stringify "^1.0.1"
     strip-bom "^3.0.0"
 
-ember-cli-htmlbars@^4.2.0, ember-cli-htmlbars@^4.2.2, ember-cli-htmlbars@^4.3.1:
+ember-cli-htmlbars@^4.2.0, ember-cli-htmlbars@^4.3.1:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-4.4.0.tgz#7ca17d5ca8f7550984346d9e6e93da0c3323f8d9"
   integrity sha512-ohgctqk7dXIZR4TgN0xRoUYltWhghFJgqmtuswQTpZ7p74RxI9PKx+E8WV/95mGcPzraesvMNBg5utQNvcqgNg==
@@ -5745,14 +5745,14 @@ ember-fetch@^8.0.1:
     node-fetch "^2.6.0"
     whatwg-fetch "^3.4.0"
 
-ember-gesture-modifiers@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ember-gesture-modifiers/-/ember-gesture-modifiers-0.1.1.tgz#2e052ef1cd502ea0d96d5f5e948bd476edb96619"
-  integrity sha512-U+qZEYuNZAesg/3NeigtRvZJWB7ESoP93DFHGBiL1FRZQ64ubDOE4s+XzDvB97H8LQ0ZTmvKI4j1wgZ40bg94Q==
+ember-gesture-modifiers@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-gesture-modifiers/-/ember-gesture-modifiers-0.2.0.tgz#81ad846a1dba870c60b831a0ab6c6ac5913bbd5c"
+  integrity sha512-8K54Xs4Mpege//0zXS2NDiAvtdXPFZVibFyUdgzQYZ/3ELDur5Sf93TFVd3pYHUcU2iYTFzmMK/xkQb4ZMU/QA==
   dependencies:
-    ember-cli-babel "^7.17.2"
-    ember-cli-htmlbars "^4.2.2"
-    ember-modifier "^1.0.3"
+    ember-cli-babel "^7.21.0"
+    ember-cli-htmlbars "^5.2.0"
+    ember-modifier "^2.1.0"
 
 ember-get-config@^0.2.4:
   version "0.2.4"
@@ -5807,6 +5807,18 @@ ember-load-initializers@^2.1.1:
     ember-cli-babel "^7.11.0"
     ember-cli-typescript "^2.0.2"
 
+ember-lodash@^4.19.4:
+  version "4.19.5"
+  resolved "https://registry.yarnpkg.com/ember-lodash/-/ember-lodash-4.19.5.tgz#489293aceb25c8b165e9b0b802c4bd1e3a4cda37"
+  integrity sha512-3NMtKvEMpipaxRuf5jbihQ5iGWnZyYssxLd0xDbqzxTU/3rHhnDIVS3+qPnw5AT0iH+hjlFlk1M4Ekv/K8a+bw==
+  dependencies:
+    broccoli-debug "^0.6.1"
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^3.0.0"
+    broccoli-string-replace "^0.1.1"
+    ember-cli-babel "^7.0.0"
+    lodash-es "^4.17.4"
+
 ember-maybe-import-regenerator@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/ember-maybe-import-regenerator/-/ember-maybe-import-regenerator-0.1.6.tgz#35d41828afa6d6a59bc0da3ce47f34c573d776ca"
@@ -5837,10 +5849,10 @@ ember-mobile-bar@0.1.0-alpha.5:
     ember-resize-observer "^0.1.0"
     ember-responds-to "^1.5.0"
 
-ember-mobile-menu@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/ember-mobile-menu/-/ember-mobile-menu-2.0.3.tgz#b0d8399426403a2b364d51f45c8f7c487ffb8d83"
-  integrity sha512-8qM7FwmJJzypNn35Jja6rWJT4gUPWrF3KtB+pb1Cv5JANEIpnYOx2kLsCGnyfx0AnH1q34t6kt+sUg7235rO5A==
+ember-mobile-menu@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ember-mobile-menu/-/ember-mobile-menu-2.0.4.tgz#e5dda41cc566152f0341b756660a43473ebf2acc"
+  integrity sha512-j+3BDV2MXPsUig544l8Kt/8r/FbBnaaHEWv7pOIuOVl9rH/lht/IVVmF8cUqfTy0AcR1MezzyEVTOZEX/zRF+Q==
   dependencies:
     "@ember/render-modifiers" "^1.0.2"
     "@glimmer/component" "^1.0.0"
@@ -5851,7 +5863,7 @@ ember-mobile-menu@^2.0.1:
     ember-cli-htmlbars "^5.2.0"
     ember-concurrency "^1.1.6"
     ember-concurrency-test-waiter "^0.3.1"
-    ember-gesture-modifiers "^0.1.1"
+    ember-gesture-modifiers "^0.2.0"
     ember-maybe-import-regenerator "^0.1.6"
     ember-on-resize-modifier "^0.2.1"
     ember-set-body-class "^0.4.0"
@@ -6136,9 +6148,9 @@ ember-try@^1.4.0:
     rsvp "^4.7.0"
     walk-sync "^1.1.3"
 
-"ember-usable@https://github.com/pzuraq/ember-usable#0d03a50":
+"ember-usable@git+https://github.com/pzuraq/ember-usable.git#0d03a50":
   version "0.0.0"
-  resolved "https://github.com/pzuraq/ember-usable#0d03a500a2f49041a4ddff0bb05b077c3907ed7d"
+  resolved "git+https://github.com/pzuraq/ember-usable.git#0d03a500a2f49041a4ddff0bb05b077c3907ed7d"
   dependencies:
     ember-cli-babel "^7.13.0"
     ember-cli-htmlbars "^4.2.0"
@@ -8872,6 +8884,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash-es@^4.17.4:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+
 lodash._arraycopy@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._arraycopy/-/lodash._arraycopy-3.0.0.tgz#76e7b7c1f1fb92547374878a562ed06a3e50f6e1"
@@ -9079,7 +9096,7 @@ lodash.uniqby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.uniqby/-/lodash.uniqby-4.7.0.tgz#d99c07a669e9e6d24e1362dfe266c67616af1302"
   integrity sha1-2ZwHpmnp5tJOE2Lf4mbGdhavEwI=
 
-lodash@^4.15.0, lodash@^4.16.3, lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.6.1:
+lodash@^4.15.0, lodash@^4.16.3, lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.6.1:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
