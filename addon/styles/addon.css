@@ -3,6 +3,10 @@
 @import 'sanitize.css/forms.css';
 @import 'ember-mobile-bar';
 
+:root {
+  --ion-spinner-color: #999;
+}
+
 :global {
   body, .mobile-menu-wrapper__content {
     background: #FAFBFC;
