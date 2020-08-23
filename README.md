@@ -1,7 +1,7 @@
 empress-blog-hummingbird-template
 ==============================================================================
 
-[Short description of the addon.]
+A gesture enabled theme for empress-blog.
 
 
 Compatibility
@@ -23,7 +23,7 @@ ember install empress-blog-hummingbird-template
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+See https://github.com/empress/empress-blog#quick-start for instructions on how to use empress-blog. Instead of `empress-blog-casper-template` use `empress-blog-hummingbird-template`.
 
 
 Contributing
