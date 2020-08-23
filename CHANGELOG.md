@@ -1,4 +1,17 @@
 
+## v1.3.0 (2020-08-23)
+
+#### :rocket: Enhancement
+* [#16](https://github.com/nickschot/empress-blog-hummingbird-template/pull/16) set spinner color to #999 ([@nickschot](https://github.com/nickschot))
+* [#15](https://github.com/nickschot/empress-blog-hummingbird-template/pull/15) show spinner when transitioning, (quickly) fade in content ([@nickschot](https://github.com/nickschot))
+
+#### :bug: Bug Fix
+* [#14](https://github.com/nickschot/empress-blog-hummingbird-template/pull/14) fix menu border not animating properly on tablet/desktop ([@nickschot](https://github.com/nickschot))
+
+#### Committers: 1
+- Nick Schot ([@nickschot](https://github.com/nickschot))
+
+
 ## v1.2.1 (2020-08-15)
 
 #### :bug: Bug Fix
