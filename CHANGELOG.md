@@ -1,4 +1,13 @@
 
+## v1.3.1 (2020-08-23)
+
+#### :bug: Bug Fix
+* [#17](https://github.com/nickschot/empress-blog-hummingbird-template/pull/17) upgrade ember-mobile-menu to fix horizontal scrollbar appearing in certain situations ([@nickschot](https://github.com/nickschot))
+
+#### Committers: 1
+- Nick Schot ([@nickschot](https://github.com/nickschot))
+
+
 ## v1.3.0 (2020-08-23)
 
 #### :rocket: Enhancement
