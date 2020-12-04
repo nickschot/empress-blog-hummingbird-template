@@ -2,7 +2,7 @@
 const recast = require('recast');
 const { readFileSync, writeFileSync } = require('fs');
 const path = require('path');
-const stringUtils = require('ember-cli-string-utils');
+const { dasherize } = require('ember-cli-string-utils');
 
 module.exports = {
   description: 'The default blueprint for empress-blog-hummingbird-template.',
@@ -25,7 +25,7 @@ module.exports = {
 
   locals: function(options) {
     let packageName = options.project.name();
-    let dasherizedPackageName = stringUtils.dasherize(packageName);
+    let dasherizedPackageName = dasherize(packageName);
 
     if(options.project.isEmberCLIAddon()) {
       dasherizedPackageName = 'dummy';
