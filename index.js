@@ -34,6 +34,7 @@ if (process.env.ANALYZE_BUNDLE) {
   options.autoImport = {
     webpack: {
       plugins: [
+        // eslint-disable-next-line node/no-unpublished-require
         new (require('webpack-bundle-analyzer')).BundleAnalyzerPlugin(),
       ],
     }

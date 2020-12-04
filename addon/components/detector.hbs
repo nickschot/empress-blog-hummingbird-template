@@ -1,7 +1,7 @@
 <div {{in-viewport onEnter=(fn (mut this.visible) true) onExit=(fn (mut this.visible) false)}}></div>
 
-{{#unless this.visible}}
-  {{set-body-class "detector-hidden"}}
-{{else}}
+{{#if this.visible}}
   {{set-body-class "detector-visible"}}
-{{/unless}}
+{{else}}
+  {{set-body-class "detector-hidden"}}
+{{/if}}
